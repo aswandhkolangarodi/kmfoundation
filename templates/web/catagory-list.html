@@ -1,0 +1,34 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="inner-banner inner-banner-bg">
+    <div class="container">
+        <div class="inner-title text-center">
+            <h3>Catagories</h3>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>Catagories</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="row container pt-50">
+    <div class="col-lg-3 col-6">
+        <div class="featured-item-two">
+            <a href="{% url 'web:university' %}">
+                <i class="flaticon-web-development"></i>
+                <h3>Kerala</h3>
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+{% endblock %}

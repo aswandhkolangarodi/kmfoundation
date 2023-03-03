@@ -1,0 +1,94 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+<div class="courses-details-area pt-50 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="courses-details-contact">
+                    <div class="tab courses-details-tab">
+                        <div class="tab_content current active">
+                            <div class="tabs_item current">
+                                <div class="courses-details-tab-content">
+                                    <div class="courses-details-instructor">
+                                        <h1>{{ career.job_title }}</h1>
+                                        <ul class="course-list">
+                                            <li> <i class="fa fa-solid fa-calendar-days"></i>{{ career.date }}</li>
+                                            <li><i class="fa fa-solid fa-user"></i>{{ career.vacancy }} Seats</li>
+                                            <li><i class="ri-time-fill"></i> {{ career.job_type }}</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="courses-details-tab-content">
+                                    <div class="courses-details-into">
+                                        <h3>About</h3>
+                                        <p>
+                                            {{ career.about_job }}
+                                        </p>
+                                        <p>
+
+                                    </div>
+                                    <div class="courses-details-into">
+                                        <h3>Basic Requirements</h3>
+                                        <p>{{ career.basic_requirements }}
+                                        </p>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+
+            <div class="col-lg-4">
+                <div class="contact-form">
+                    <form method="post">
+                        {% csrf_token%}
+                    <div class="row">
+                    <div class="col-lg-12">
+                    <div class="form-group">
+                    <input type="text" name="name" id="name" class="form-control" required="" data-error="Please Enter Your Name" placeholder="Name">
+                    <div class="help-block with-errors"></div>
+                    </div>
+                    </div>
+                    <div class="col-lg-12">
+                    <div class="form-group">
+                    <input type="email" name="email" id="email" class="form-control" required="" data-error="Please Enter Your Email" placeholder="Email">
+                    <div class="help-block with-errors"></div>
+                    </div>
+                    </div>
+                    <div class="col-lg-12">
+                    <div class="form-group">
+                    <input type="text" name="phone" id="phone_number" required="" data-error="Please Enter Your number" class="form-control" placeholder="Phone Number">
+                    <div class="help-block with-errors"></div>
+                    </div>
+                    </div>
+                    <div class="col-lg-12">
+                    <div class="form-group">
+
+                        <label>Resume</label>
+                    <input type="file" name="resume"  class="form-control" accept="image/*,.pdf"  required="">
+                  
+                    </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                    <button type="submit" class="default-btn" style="pointer-events: all; cursor: pointer;">
+                    Apply Now
+                    </button>
+
+
+                    </div>
+                    </div>
+                    </form>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

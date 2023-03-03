@@ -1,0 +1,41 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="blog-details-area pt-100 pb-70">
+    <div class="container">
+        <div class="section-title text-center mb-45">
+            <span>Update</span>
+            <h2>{{ update.blog_heading }}</h2>
+        </div>
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <div class="blog-details-content pr-20">
+                    <div class="blog-preview-img text-center">
+                        <img src="{{ update.image.url }}" alt="Blog Details">
+                    </div>
+                    <ul class="tag-list">
+                        <li><i class="ri-calendar-todo-fill"></i> {{ update.date }} </li>
+                        <!-- <li><i class="ri-price-tag-3-fill"></i> <a href="tags.html">Education</a></li> -->
+                    </ul>
+                    <!-- <h2>{{ update.blog_heading }}</h2> -->
+                    <p>
+{{ update.about_blog|safe }}
+                    </p>
+
+
+                </div>
+            </div>
+
+
+      
+
+        </div>
+    </div>
+</div>
+
+
+
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="event-details-area pt-50 pb-70">
+    <div class="container">
+        <div class="section-title text-center mb-45">
+            <span>Event</span>
+            <h2>{{ event.event_name}}</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-12">
+                <div class="event-details-content pr-20">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="event-preview-img text-center">
+                                <img src="{{ event.image.url }}" class="w-100" alt="Event Details">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="event-sidebar">
+                                <h3 class="title">Events description</h3>
+                                <ul>
+                                    <li>Location: <span>{{ event.location}}</span></li>
+                                    <li>Date: <span>{{ event.date}}</span></li>
+                                    <li>Time: <span>{{ event.time}}</span></li>
+                                    <li>Phone: <span>011-325-143-2567</span></li>
+                                    <li>map: <span> <a href="{{ event.map_link}}">
+                                                {{ event.location}}
+                                            </a></span> </li>
+        
+                                </ul>
+                            </div>
+                            <p class="text-center">
+                                {{ event.about_event|safe}}
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- <h2>{{ event.event_name}}</h2> -->
+
+
+                    
+                   
+
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

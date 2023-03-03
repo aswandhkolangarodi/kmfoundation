@@ -1,0 +1,154 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="blog-details-area pt-100 pb-70">
+    <div class="container">
+        <div class="section-title text-center mb-45">
+            <span>University Detail</span>
+            <h2>{{university.name}}</h2>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="blog-details-content pr-20">
+                    <div class="blog-preview-slider owl-carousel owl-theme owl-loaded owl-drag">
+                        <div class="owl-dots disabled"></div>
+                    </div>
+
+                    <p>
+                        {{ university.about|safe}}
+                    </p>
+                    <div class="pb-3" style="text-align: center;">
+                        <a href="#apply" class="d-lg-none default-btn">
+                            Apply
+                            </a>
+                    </div>
+
+                    <div class="article-share">
+                        <h1>
+                            Courses offerd
+                        </h1>
+                        {% for c in courese_list %}
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="article-tag">
+                                    <ul>
+
+
+                                        <li class="title"><i class="ri-price-tag-3-fill"></i></li>
+
+                                        <li>{{c.course_list}}</li>
+
+
+
+
+                                    </ul>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        {% endfor %}
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="col-lg-4" id="apply">
+                <div class="contact-form" >
+                    <form method="post" id="whatsappform">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="text" id="name" name="name" class="form-control" required=""
+                                        data-error="Please Enter Your Name" placeholder="Name">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="email" id="email" name="email" class="form-control" required=""
+                                        data-error="Please Enter Your Email" placeholder="Email">
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <input type="text" id="phone" name="phone" required=""
+                                        data-error="Please Enter Your number" class="form-control"
+                                        placeholder="Phone Number">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="form-group">
+                                    <select name="course" id="course" class="form-control">
+                                        <option value="">Choose course....</option>
+                                        {% for course in courese_list %}
+                                        <option value="{{course.course_list}}">
+                                            {{course.course_list}}</option>
+                                        {% endfor %}
+
+
+                                    </select>
+                                </div>
+                                <input type="text" hidden id="university" value="{{university.name}}">
+                            </div>
+
+
+                            <div class="col-lg-12 col-md-12">
+
+                                <button type="submit" class="default-btn" style="pointer-events: all; cursor: pointer;">
+                                    Apply Now
+                                </button>
+
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block js %}
+
+
+
+<script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+
+<script>
+    $("#whatsappform").validate({
+        submitHandler: function (form) {
+            // const form = $("#whatsappform");
+            // const to_phone = '918547768153';
+            const name = $("#name").val();
+            const email = $("#email").val();
+            const phone = $("#phone").val();
+            const course = $("#course").val();
+            const university = $("#university").val();
+
+            const text = [
+                'name:' + name,
+                'email:' + email,
+                'phone:' + phone,
+                'course: ' + course,
+                'university: ' + university,
+
+
+            ].join("\n") // change to what you want sep to be
+
+            // make the url
+            const action = "https://wa.me/918848804339" + "?text=" + encodeURIComponent(text);
+            window.location.href = action;
+
+        }
+    });
+</script>
+{% endblock %}

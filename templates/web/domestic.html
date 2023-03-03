@@ -1,0 +1,25 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="row container pt-50">
+    {% for domestic in domestic %}  
+    <div class="col-lg-3 col-6 mx-auto">
+        <div class="featured-item-two">
+            <a href="{% url 'web:course-list' domestic.id %}">
+                {% if domestic.icon %}
+                <img src="{{domestic.icon.url}}" width="40" alt="">
+                {% endif %}
+                <h3 class="mx-3">{{ domestic.title }}</h3>
+            </a>
+        </div>
+    </div>
+{% endfor %}
+
+</div>
+
+
+
+
+{% endblock %}

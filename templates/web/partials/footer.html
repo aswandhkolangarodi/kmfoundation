@@ -1,0 +1,135 @@
+{% load static %}
+
+<footer class="footer-area">
+    <div class="container pt-100">
+        <div class="row">
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-widget">
+                    <div class="footer-logo">
+                        <a href="{% url 'web:index' %}">
+                            <img src="{% static 'web/images/logos/kmwhite.png' %}" alt="Images" loading="lazy">
+                        </a>
+                    </div>
+                    <p>
+                        K M Foundation is one of the most trusted educational organizations in India delivering quality career assistance for aspirants.
+                    </p>
+                    <ul class="social-link">
+                        <li class="social-title">Follow Us:</li>
+                        <li>
+                            <a href="https://www.facebook.com/kmfoundationeducation" target="_blank">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="https://twitter.com/" target="_blank">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </li> -->
+                        <li>
+                            <a href="https://instagram.com/kmfoundationofficial?igshid=NTdlMDg3MTY=" target="_blank">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <div class="footer-widget ps-5">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-list">
+                        <li>
+                            <a href="{% url 'web:index' %}">
+                                Home
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'web:about' %}">
+                                About
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="{% url 'web:index' %}#course" >
+                                Course
+                            </a>
+                        </li>
+
+
+
+                        <li>
+                            <a href="{% url 'web:index' %}#services">
+                                Services
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'web:updates' %}">
+                                Updates
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'web:event' %}">
+                                Events
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'web:career' %}">
+                                Careers
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{% url 'web:contact' %}">
+                                Contact Us
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-6 col-sm-6">
+                <div class="footer-widget ps-5">
+                    <h3>Official Info</h3>
+                    <ul class="footer-contact">
+                        <li>
+                            <i class="ri-map-pin-2-fill"></i>
+                            <div class="content">
+                                <h4>Location:</h4>
+                                <span>Address: 2nd Floor, Forza Mall2, Chembra Road,
+                                    Near Gulf market Tirur, Malappuram Dt - 676101, Kerala, India</span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ri-mail-fill"></i>
+                            <div class="content">
+                                <h4>Email:</h4>
+                                <span><a
+                                        href="mailto:info@kmfoundation.co.in"><span>info@kmfoundation.co.in</span></a></span>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="ri-phone-fill"></i>
+                            <div class="content">
+                                <h4>Phone:</h4>
+                                <span><a href="tel:919747000092">+91 9747000092</a></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright-area">
+        <div class="container">
+            <div class="copy-right-text text-center">
+                <p>
+                    Copyright @
+                    <script data-cfasync="false"
+                        src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+                    <script>document.write(new Date().getFullYear())</script> <b> Kmfoundation</b> 
+    
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,179 @@
+{% load static %}
+
+<header class="top-header ">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-9 col-md-8">
+                <div class="header-left">
+                    <ul>
+                        <li>
+                            <i class="ri-phone-fill"></i>
+                            <a href="tel:919747000092">+91 9747000092</a>
+                        </li>
+                        <li>
+                            <i class="ri-mail-fill"></i>
+                            <a href="mailto:info@kmfoundation.co.in"><span>info@kmfoundation.co.in</span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 d-none d-md-block">
+                <div class="header-right">
+                    <div class="header-language dropdown language-option">
+
+                    </div>
+                    <ul class="social-list">
+                        <li>
+                            <a href="https://www.facebook.com/kmfoundationeducation" target="_blank">
+                                <i class="ri-facebook-fill"></i>
+                            </a>
+                        </li>
+                        <!-- <li>
+                            <a href="https://twitter.com/" target="_blank">
+                                <i class="ri-twitter-fill"></i>
+                            </a>
+                        </li> -->
+                        <li>
+                            <a href="https://instagram.com/kmfoundationofficial?igshid=NTdlMDg3MTY=" target="_blank">
+                                <i class="ri-instagram-line"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+<div class="navbar-area">
+    <div class="mobile-responsive-nav">
+        <div class="container">
+            <div class="mobile-responsive-menu">
+                <div class="logo">
+                    <a href="{% url 'web:index' %}">
+                        <img src="{% static 'web/images/logos/km.svg' %}" class="logo-one phone-svg" alt="logo">
+                        <img src="{% static 'web/images/logos/km.svg' %}" class="logo-two" alt="logo">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="desktop-nav nav-area shadow-sm">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-md navbar-light ">
+                <a class="navbar-brand" href="{% url 'web:index' %}">
+                    <img src="{% static 'web/images/logos/km.svg' %}" class="logo-one svg-logo" alt="Logo">
+                    <img src="{% static 'web/images/logos/km.svg' %}" class="logo-two" alt="Logo">
+                </a>
+
+                {% comment %}
+                <div class="nav-widget-form">
+                    <form class="search-form search-form-bg">
+                        <input type="search" class="form-control" placeholder="Search courses">
+                        <button type="submit">
+                            <i class="ri-search-line"></i>
+                        </button>
+                    </form>
+                </div>
+                {% endcomment %}
+
+
+
+
+                <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a href="{% url 'web:index' %}" class="nav-link {% if is_index %}active{% endif %}">
+                                Home
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a href="{% url 'web:about' %}" class="nav-link {% if is_about %}active{% endif %}">
+                                About Us
+                            </a>
+                        </li>
+
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Courses
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="nav-item">
+                                    <a href="{% url 'web:domestic'  %}" class="nav-link">Domestic</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{% url 'web:international' %}" class="nav-link">International</a>
+                                </li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                Services
+                            </a>
+                            <ul class="dropdown-menu">
+
+                                
+                                <li class="nav-item">
+                                    <a href="{% url 'web:service_abroad' %}" class="nav-link">Abroad Admissions</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="{% url 'web:service_domestic' %}" class="nav-link">Domestic Admissions</a>
+                                </li>
+                               
+                        </li>
+                    </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'web:updates' %}" class="nav-link {% if is_blog %}active{% endif %}">
+                            Updates
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'web:event' %}" class="nav-link {% if is_event %}active{% endif %}">
+                            Events
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'web:career' %}" class="nav-link {% if is_career %}active{% endif %}">
+                            Careers
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="{% url 'web:contact' %}" class="nav-link {% if is_contact %}active{% endif %}">
+                            Contact Us
+                        </a>
+                    </li>
+
+                    <!-- <li class="nav-item">
+                        <div class="switch-box"><label id="switch" class="switch"><input type="checkbox"
+                                    onchange="toggleTheme()" id="slider"><span class="slider round"></span></label>
+                        </div>
+                    </li> -->
+
+                    </ul>
+
+                    {% comment %}
+                    <div class="others-options d-flex align-items-center">
+                        <div class="optional-item">
+                            <a href="signup.html" class="default-btn two border-radius-50">Sign Up</a>
+                        </div>
+                    </div>
+
+                    {% endcomment %}
+
+                </div>
+            </nav>
+        </div>
+    </div>
+
+</div>

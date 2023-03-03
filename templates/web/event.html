@@ -1,0 +1,40 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="event-area pt-50 pb-100">
+    <div class="container">
+        <div class="section-title text-center mb-45">
+            <span>EVENT</span>
+            <h2>Our Awesome Upcoming Events</h2>
+        </div>
+        <div class="row">
+
+            {% for event in event %}
+            <div class="col-lg-6">
+                <div class="event-item box-shadow">
+                    <div class="event-img">
+                        <a href="{% url 'web:event-detail' event.id %}">
+                            <img src="{{ event.image.url }}" alt="Events" />
+                        </a>
+                    </div>
+                    <div class="event-content">
+                        <ul class="event-list">
+                            <li><i class="ri-calendar-todo-fill"></i>{{ event.date }}</li>
+                            <li><i class="ri-map-pin-fill"></i>{{ event.location }}</li>
+                            <li><i class="ri-time-fill"></i> {{ event.time }}</li>
+                        </ul>
+                        <h3><a href="{% url 'web:event-detail' event.id %}">{{ event.event_name }}</a></h3>
+                        <p>{{ event.about_event|safe|truncatechars:200 }}</p>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

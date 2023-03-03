@@ -1,0 +1,273 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="inner-banner inner-banner-bg3">
+    <div class="container">
+        <div class="inner-title text-center">
+            <h3>Single blog</h3>
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li> Single blog</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="blog-details-area pt-100 pb-70">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="blog-details-content pr-20">
+                    <div class="blog-preview-img">
+                        <img src="assets/images/blog/blog-details.jpg" alt="Blog Details">
+                    </div>
+                    <ul class="tag-list">
+                        <li><i class="ri-calendar-todo-fill"></i> Jan 12,2022 </li>
+                        <li><i class="ri-price-tag-3-fill"></i> <a href="tags.html">Education</a></li>
+                    </ul>
+                    <h2>All that is wrong with codding in the field of apprentices</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore
+                        et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamc laboris nisi ut
+                        aliquip commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur commodo. Lorem ipsum dolor sit amet consectetur adipisicing
+                        elit. Voluptatem necessitatibus dolor placeat fuga deleniti doloremque.
+                    </p>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                        est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium sed
+                        doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                        architecto beatae vitae dicta sunt explicabo.</p>
+                    <blockquote class="blockquote">
+                        <i class="flaticon-quotation"></i>
+                        <p>
+                            “ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                            temporincididunt ut labore dolore magna aliqua.“
+                        </p>
+                    </blockquote>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt labore
+                        et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamc laboris nisi ut
+                        aliquip commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur commodo.
+                    </p>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+                        est laborum. Sed ut perspici unde omnis iste natus error sit voluptatem accusantium sed
+                        doloremque laudantium.</p>
+                    <div class="article-share">
+                        <div class="row align-items-center">
+                            <div class="col-lg-6 col-md-6">
+                                <div class="article-tag">
+                                    <ul>
+                                        <li class="title"><i class="ri-price-tag-3-fill"></i></li>
+                                        <li><a href="tags.html" target="_blank"> Education,</a></li>
+                                        <li><a href="tags.html" target="_blank">Business, </a></li>
+                                        <li><a href="tags.html" target="_blank">Physics</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="article-social-icon">
+                                    <ul class="social-icon">
+                                        <li class="title">Share :</li>
+                                        <li>
+                                            <a href="https://www.facebook.com/" target="_blank">
+                                                <i class="ri-facebook-fill"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://twitter.com/" target="_blank">
+                                                <i class="ri-twitter-fill"></i>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://www.pinterest.com/" target="_blank">
+                                                <i class="ri-instagram-line"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="comments-form">
+                        <div class="contact-form">
+                            <h4>Leave A Reply</h4>
+                            <p>Your email address will not be published. Required fields are marked</p>
+                            <form id="contactForm">
+                                <div class="row">
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="text" name="name" id="name" class="form-control" required
+                                                data-error="Please enter your name" placeholder="Your Name">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-sm-6">
+                                        <div class="form-group">
+                                            <input type="email" name="email" id="email" class="form-control" required
+                                                data-error="Please enter your email" placeholder="Your Email">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <textarea name="message" class="form-control" id="message" cols="30"
+                                                rows="8" required data-error="Write your message"
+                                                placeholder="Comment..."></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="agree-label">
+                                            <input type="checkbox" id="chb1">
+                                            <label for="chb1">
+                                                Save my info for the next comment
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12">
+                                        <button type="submit" class="default-btn">
+                                            Post A Comment
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="side-bar-area">
+                    <div class="side-bar-widget">
+                        <form class="search-form">
+                            <input type="search" class="form-control" placeholder="Search...">
+                            <button type="submit">
+                                <i class="ri-search-line"></i>
+                            </button>
+                        </form>
+                    </div>
+                    <div class="side-bar-widget">
+                        <h3 class="title">Categories</h3>
+                        <div class="side-bar-categories">
+                            <ul>
+                                <li>
+                                    <a href="categories.html" target="_blank">
+                                        Education
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="categories.html" target="_blank">
+                                        Business
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="categories.html" target="_blank">
+                                        Human resources
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="categories.html" target="_blank">
+                                        Investment
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="categories.html" target="_blank">
+                                        Lifestyle
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="categories.html" target="_blank">
+                                        Mangement
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="side-bar-widget">
+                        <h3 class="title">Popular post</h3>
+                        <div class="widget-popular-post">
+                            <article class="item">
+                                <a href="blog-details.html" class="thumb">
+                                    <span class="full-image cover bg1" role="img"></span>
+                                </a>
+                                <div class="info">
+                                    <p>12 Jan, 2022</p>
+                                    <h4 class="title-text">
+                                        <a href="blog-details.html">
+                                            All that is wrong codding in the field of apprentices
+                                        </a>
+                                    </h4>
+                                </div>
+                            </article>
+                            <article class="item">
+                                <a href="blog-details.html" class="thumb">
+                                    <span class="full-image cover bg2" role="img"></span>
+                                </a>
+                                <div class="info">
+                                    <p>14 Jan, 2022</p>
+                                    <h4 class="title-text">
+                                        <a href="blog-details.html">
+                                            How to use technology to adapt your talent to the world
+                                        </a>
+                                    </h4>
+                                </div>
+                            </article>
+                            <article class="item">
+                                <a href="blog-details.html" class="thumb">
+                                    <span class="full-image cover bg3" role="img"></span>
+                                </a>
+                                <div class="info">
+                                    <p>16 Jan, 2022</p>
+                                    <h4 class="title-text">
+                                        <a href="blog-details.html">
+                                            Here are the things to look for when
+                                            selecting an online courses
+                                        </a>
+                                    </h4>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="side-bar-widget">
+                        <h3 class="title">Tags</h3>
+                        <ul class="side-bar-widget-tag">
+                            <li><a href="tags.html" target="_blank"> Education</a></li>
+                            <li><a href="tags.html" target="_blank">Investment</a></li>
+                            <li><a href="tags.html" target="_blank">Lifestyle</a></li>
+                            <li><a href="tags.html" target="_blank">Business</a></li>
+                            <li><a href="tags.html" target="_blank">Mangement</a></li>
+                            <li><a href="tags.html" target="_blank">Human</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="newsletter-area section-bg ptb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5">
+                <div class="section-title mt-rs-20">
+                    <span>ARE YOU IMPRESSED FOR AMAZING SERVICES?</span>
+                    <h2>Subscribe our newsletter</h2>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <form class="newsletter-form" data-toggle="validator" method="POST">
+                    <input type="email" class="form-control" placeholder="Enter Your Email Address" name="EMAIL"
+                        required autocomplete="off">
+                    <button class="subscribe-btn" type="submit">
+                        Subscribe Now <i class="flaticon-paper-plane"></i>
+                    </button>
+                    <div id="validator-newsletter" class="form-result"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

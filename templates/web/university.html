@@ -1,0 +1,38 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="event-area pt-100 pb-100">
+    <div class="container">
+        <div class="section-title text-center mb-45">
+            <span>University</span>
+            <h2>Boost Your Career From Top-Rated Universities</h2>
+        </div>
+        <div class="row">
+
+            {% for i in university %}
+            <div class="col-lg-6">
+                <div class="event-item box-shadow">
+                    <div class="event-img">
+                        <a href="{% url 'web:university-detail' i.id %}">
+                            <img src="{{ i.images.url }}" alt="Events">
+                        </a>
+                    </div>
+                    <div class="event-content">
+
+                        <h3><a href="{% url 'web:university-detail' i.id  %}">{{ i.name }}</a></h3>
+            
+                        <p>{{ i.about|safe|truncatechars:200 }}</p>
+            
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

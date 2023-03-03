@@ -1,0 +1,38 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="blog-area pt-50  pb-70">
+    <div class="container">
+        <div class="section-title text-center mb-45">
+            <span>UPDATE</span>
+            <h2>Get updated with our latest news and blogs</h2>
+        </div>
+        <div class="row">
+            {% for blog in blog %}
+
+            <div class="col-lg-3 col-md-6">
+                <div class="blog-card">
+                    <a href="{% url 'web:update-detail' blog.id %}">
+                        <img src="{{ blog.image.url }}" alt="Blog">
+                    </a>
+                    <div class="content">
+                        <ul>
+                            <li><i class="ri-calendar-todo-fill"></i> {{ blog.date }} </li>
+                        </ul>
+                        <h3><a href="{% url 'web:update-detail' blog.id %}">{{ blog.blog_heading}}</a></h3>
+                        <p>{{ blog.about_blog|safe|truncatechars:200 }}</p>
+                        <a href="{% url 'web:update-detail' blog.id %}" class="read-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+
+            {% endfor %}
+
+
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

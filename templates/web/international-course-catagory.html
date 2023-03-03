@@ -1,0 +1,56 @@
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="event-area pt-50 pb-100">
+    <div class="container">
+        <div class="section-title text-center mb-45">
+            <span>COURSES</span>
+            <h2>Most Popular Courses</h2>
+        </div>
+        <div class="row">
+
+            {% for course in category %}
+            <div class="col-lg-3 col-6">
+                <div class="featured-item-two">
+                    <a href="{% url 'web:international-course-lsit' course.id %}">
+                        {% if course.icon %}
+                        <img src="{{course.icon.url}}" width="40" alt="">
+                        {% endif %}
+                        <h3 class="mx-3">{{ course.title }}</h3>
+                    </a>
+                </div>
+            </div>
+            {% comment %}
+            <div class="col-lg-3">
+                <div class="event-item box-shadow">
+                    <div class="event-img">
+                        <a href="{% url 'web:international-course-lsit' course.id %}">
+
+                        </a>
+                    </div>
+                    <div class="event-content">
+                        <a href="{% url 'web:international-course-lsit' course.id %}">
+                            {% if course.icon %}
+                            <img src="{{course.icon.url}}" width="30" alt="">
+                            {% endif %}
+                            <h3 class="mx-3">{{ course.title }}</h3>
+                        </a>
+                       
+
+                    </div>
+                </div>
+            </div>
+            {% endcomment %}
+            {% endfor %}
+
+
+            <div class="col-lg-12 col-md-12 text-center">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

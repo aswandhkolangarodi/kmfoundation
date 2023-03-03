@@ -1,0 +1,43 @@
+
+{% extends 'web/partials/base.html' %}
+{% load static %}
+{% block content %}
+
+<div class="contact-info-area pt-50 pb-70">
+    <div class="container">
+
+        <div class="section-title text-center mb-45">
+            <span>CAREER</span>
+            <h2>Secure Your Career With K M Foundation</h2>
+        </div>
+        <div class="row justify-content-center">
+
+            {% for career in career %}
+            <div class="col-lg-3  col-12 col-sm-8">
+                <div class="career-info-card contact-padding shadow-lg">
+                    <h3>{{ career.job_title }}</h3>
+
+                    <p>
+                        {{ career.date }}
+                    </p>
+
+                    <p>
+                        {{ career.about_job }}
+                    </p>
+               
+                    <hr>
+                    <div class="text-end">
+                        <a href="{% url 'web:career-detail' career.id %}" class="card-link">View More</a>
+                    </div> 
+                      
+                </div>
+
+               
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
